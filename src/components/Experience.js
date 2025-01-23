@@ -1,9 +1,10 @@
 // components/Experience.js
 import React from 'react';
 import { GlowEffect } from './ui/GlowEffect';
+import ExpAccordion from './ExpAccordion';
 
 // Description Component
-const Description = ({ points }) => (
+export const Description = ({ points }) => (
   <ul className="space-y-2">
     {points.map((point, index) => (
       <div className='flex'>
@@ -16,6 +17,7 @@ const Description = ({ points }) => (
     ))}
   </ul>
 );
+
 
 
 const TimelineItem = ({ date, title, company, description }) => (
@@ -43,26 +45,6 @@ const TimelineItem = ({ date, title, company, description }) => (
         <h2 className='text-md pb-4'>{company}</h2>
         
         <Description points={description} />
-      <div>
-
-      </div>
-        {/* <svg
-          role='img'
-          xmlns='http://www.w3.org/2000/svg'
-          viewBox='0 0 70 70'
-          aria-label='MP Logo'
-          width='70'
-          height='70'
-          className='absolute bottom-4 right-4 h-8 w-8'
-          fill='#3CCF91'
-        >
-          <path
-            stroke='currentColor'
-            strokeLinecap='round'
-            strokeWidth='3'
-            d='M51.883 26.495c-7.277-4.124-18.08-7.004-26.519-7.425-2.357-.118-4.407-.244-6.364 1.06M59.642 51c-10.47-7.25-26.594-13.426-39.514-15.664-3.61-.625-6.744-1.202-9.991.263'
-          ></path>
-        </svg> */}
       </div>
     </div>
   </div>
@@ -104,10 +86,10 @@ function Experience() {
   ];
 
   return (
-      <section id="experience" className='px-8 py-16 min-h-screen'>
-      <h2 className=" text-white text-4xl mb-8">{workExperience}</h2>
+      <section id="experience" className='text-center  sm:text-start px-8 py-16 min-h-screen'>
+      <h2 className="sm:px-8 text-white text-4xl mb-8">{workExperience}</h2>
     <div className="max-w-4xl mx-auto py-12 px-4">
-      <div className="relative">
+      <div className="hidden xs:block relative">
         {experiences.map((experience, index) => (
           <TimelineItem
             key={index}
@@ -118,6 +100,17 @@ function Experience() {
           />
         ))}
       </div>
+      <div className="block xs:hidden space-y-4">
+    {experiences.map((item, index) => (
+      <ExpAccordion
+        key={index}
+        date={item.date}
+        title={item.title}
+        company={item.company}
+        description={item.description}
+      />
+    ))}
+  </div>
     </div>
 
     

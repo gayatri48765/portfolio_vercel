@@ -6,7 +6,7 @@ function TechStack() {
 
   return (
     
-    <div className="flex flex-wrap w-3/4 text-lg justify-start gap-4 my-4 p-4">
+    <div className="w-auto flex flex-wrap w-3/4 text-lg justify-start gap-4 my-4 p-4">
           {techStack.map((tech, index) => (
             <div>
         <span className='text-primary-main p-2'>➤</span>

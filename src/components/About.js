@@ -8,20 +8,20 @@ function About() {
   const  aboutMe = '< About Me />'
 
   return (
-    <section className="py-16 px-8 min-h-screen bg-black" id="about">
+    <section className="text-center sm:text-start py-16 px-8 min-h-screen bg-black" id="about">
 
-    <div className="flex flex-row-reverse max-w-screen-xl mx-auto">
+    <div className="flex flex-col sm:flex-row-reverse max-w-screen-xl mx-auto">
       <div className="flex flex-col justify-center items-center flex-1 text-center">
         <div className="profile-container">
           <div className="profile-photo">
-            <img src={profilePhoto} alt="Profile" className="w-80 h-80 rounded-full bg-gray-600 mx-auto mb-4" />
+            <img src={profilePhoto} alt="Profile" className="w-60 h-60 sm:w-80 sm:h-80 rounded-full bg-gray-600 mx-auto mb-4" />
           </div>
           <h2 className="text-white text-3xl mb-2">Gayatri Mangire</h2>
           <div className="w-12 h-0.5 bg-green-400 my-2 mx-auto"></div>
           <p className="text-gray-500 text-xl">Software Developer</p>
         </div>
       </div>
-      <div className="pl-8 flex-1">
+      <div className="pt-12 sm:pt-0 pl-8 flex-1">
       <h1 className="text-white text-4xl mb-4">{aboutMe}</h1>
 
         <p className="text-primary-dark text-lg py-4">

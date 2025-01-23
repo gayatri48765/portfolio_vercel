@@ -3,14 +3,14 @@ import { HoverBorderGradient } from './HoverBoardGradient';
 
 const Card = ({ imageUrl, heading, icon, tech, description }) => {
   return (
-    <div className="flex bg-black rounded-lg overflow-hidden max-w-4xl shadow-[0_0_10px_rgba(255,255,255,0.3)]">
+    <div className="flex flex-col sm:flex-row bg-black rounded-lg overflow-hidden max-w-4xl shadow-[0_0_10px_rgba(255,255,255,0.3)]">
       {/* Left side - Photo */}
-      <div className="w-1/3 h-full">
+      <div className="sm:w-1/3 h-full">
         <img src={imageUrl} alt="Card" className="w-full h-full object-contain" />
       </div>
 
       {/* Right side - Description */}
-      <div className="w-2/3 p-6 text-white">
+      <div className="sm:w-2/3 p-6 text-white">
         {/* Heading and Icon */}
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-2xl font-bold">{heading}</h2>
@@ -27,12 +27,6 @@ const Card = ({ imageUrl, heading, icon, tech, description }) => {
           >
             {tech}
           </HoverBorderGradient>
-            // <button
-            //   key={index}
-            //   className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition duration-300"
-            // >
-            //   {button}
-            // </button>
           ))}
         </div>
 
