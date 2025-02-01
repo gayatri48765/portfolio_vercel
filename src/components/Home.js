@@ -21,7 +21,7 @@ function Home() {
         <p className="text-gray-400 text-lg xs:text-xl">Software Developer Intern at TraxID LLC</p>
       </div>
       <div className='self-end pt-12 sm:pt-0 pb-12 sm:pb-48'>
-        <SocialLinks/>
+        <SocialLinks justifyEvenly={true}/>
       </div>
     </section>
   );

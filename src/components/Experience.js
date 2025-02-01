@@ -30,7 +30,7 @@ const TimelineItem = ({ date, title, company, description }) => (
     {/* Timeline line and dot */}
     <div className="relative flex flex-col items-center">
       <div className="h-full w-px bg-gray-100"></div>
-      <div className="absolute w-4 h-4 rounded-full bg-white border-4 border-gray-200"></div>
+      <div className="absolute w-4 h-4 rounded-full bg-primary-main border-4 border-primary-main"></div>
     </div>
     
     {/* Content card on the right */}
@@ -38,7 +38,7 @@ const TimelineItem = ({ date, title, company, description }) => (
       <GlowEffect
         colors={['#3CCF91', '#3CCF91', '#3CCF91', '#3CCF91']}
         mode='static'
-        blur='soft'
+        blur='softest'
       />
       <div className='relative w-full rounded-lg bg-black p-4 text-white dark:bg-white dark:text-black'>
         <h1 className='text-2xl'>{title}</h1>

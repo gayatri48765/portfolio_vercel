@@ -11,7 +11,7 @@ const ContactSection = () => {
       <p className="text-md text-center text-primary-light">Feel free to get in touch and talk more about opportunites.</p>
 
       <div className='justify-center pt-12 sm:pt-4 pb-12 sm:pb-48'>
-      <SocialLinks></SocialLinks>
+      <SocialLinks justifyEvenly={false}></SocialLinks>
         </div>
     </section>
   );
