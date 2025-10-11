@@ -6,22 +6,32 @@ function Home() {
   return (
     <section
       id="home"
-      className="text-center sm:text-start flex flex-col sm:flex-row items-center justify-center min-h-screen bg-black px-8 py-0"
+      className="flex items-center justify-center min-h-screen bg-black px-4 md:px-8 py-0"
     >
-      <div className="w-3/4 justify-start">
-        <p className="text-primary-main text-xl xs:text-3xl mb-2">Hey there! I'm</p>
-        <h1 className="text-white text-3xl xs:text-4xl lg:text-6xl md:text-5xl font-bold mb-4">{name}</h1>
-        <p className=" max-w-lg text-gray-400 text-xs xs:text-base xs:text-lg sm:text-xl mb-4">
-        I'm a <strong className='text-primary-main'>Frontend Developer | Aspiring Full-Stack Innovator</strong>, focused on building 
-										seamless Web applications. My passion lies in developing optimized and efficient web solutions.
-        </p>
-        <p className="text-white text-lg xs:text-xl mb-2">
-          Currently Pursuing MS in Computer Science at UT Dallas.
-        </p>
-        <p className="text-gray-400 text-lg xs:text-xl">Software Developer Intern at TraxID LLC</p>
-      </div>
-      <div className='self-end pt-12 sm:pt-0 pb-12 sm:pb-48'>
-        <SocialLinks justifyEvenly={true}/>
+      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between w-full">
+        {/* Main Content */}
+        <div className="lg:w-2/3 text-center lg:text-left">
+          <p className="text-green-400 text-xl md:text-2xl lg:text-3xl mb-2">Hey there! I'm</p>
+          <h1 className="text-white text-4xl md:text-6xl lg:text-7xl font-bold mb-6">{name}</h1>
+          <p className="max-w-2xl text-gray-300 text-lg md:text-xl mb-6 leading-relaxed">
+            I'm a <strong className='text-green-400'>Full-Stack Developer</strong> with 2.5+ years of experience, 
+            focused on building scalable and efficient web applications. 
+            With a <strong className='text-green-400'>Master's degree in Computer Science</strong>, I currently work as a{" "}
+            <strong className='text-green-400'>Software Developer at TraxID LLC</strong>.
+          </p>
+          <div className="space-y-2 mb-8">
+            <p className="text-white text-lg md:text-xl">
+              Building full-stack applications with <strong className='text-green-400'>React, .NET, and Cloud technologies</strong>
+            </p>
+            <p className="text-gray-400 text-lg">
+              Passionate about creating optimized and maintainable web solutions
+            </p>
+          </div>
+        </div>
+
+        <div className='lg:self-end lg:pb-16 mt-8 lg:mt-0'>
+          <SocialLinks/>
+        </div>
       </div>
     </section>
   );
